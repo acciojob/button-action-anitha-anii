@@ -3,17 +3,17 @@ import './../styles/App.css';
 
 
 const App = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState('');
 
   const handleButtonClick = () => {
-    setIsVisible(true);
+    setIsVisible("Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy");
   };
 
   return (
     <div id="main">
-      {isVisible ? (
-        <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>
-      ) : null}
+      
+        <p id="para" className="show">{isVisible}</p>
+     
       <button id="click" onClick={handleButtonClick}>
         Click me!
       </button>
